@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* nav */
+
+nav {
+    background: #809A6F;
+    height: 95px;
+    max-width: 100rem;
+    margin-inline: auto;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    font-family: sans-serif;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul li i {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #6D8B74;
+    color: #FFFFFF;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width:1003px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:938px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    nav ul li i {
+        font-size: 20px;
+    }
+    a:hover {
+        background: #6D8B74;
+        color: #FFFFFF;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* end of nav */
+
+.product-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-areas: "card content" "card content"; */
+}
+
+
+/* .card {
+    grid-area: card;
+}
+
+.content {
+    grid-area: content;
+} */
+
+
+/* .product-grid .card {
+    background-color: hotpink;
+} */
+
+.product-grid .main_img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.product-grid .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+
+/* Table */
+
+.table_content {
+    padding: 15px;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #CDC2AE;
+    width: 100%;
+    height: 80px;
+}
+
+table td {
+    border: 1px solid #CDC2AE;
+    text-align: center;
+    width: 10%;
+}
+
+td.active,
+td:hover {
+    background-color: #35858B;
+}
+
+
+/* End of Table */
+
+@media (max-width:600px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "card card" "content content";
+    }
+    .card {
+        grid-area: card;
+    }
+    .content {
+        grid-area: content;
+    }
+}
+
+
+/* card_content */
+
+.card_content {
+    margin-top: 20px;
+}
+
+.card_row {
+    padding: 15px;
+}
+
+.card_body {
+    border: 1px solid #CDC2AE;
+    border-radius: .5rem;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.card_body .card_title {
+    text-align: center;
+}
+
+.card_icon {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    margin: 10px 0 10px 0;
+    align-items: center;
+}
+
+.card_icon .card_img {
+    text-align: end;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.card_body hr {
+    width: 70%;
+    margin: auto;
+    height: 1px;
+    background-color: #CDC2AE;
+    border: none;
+}
+
+
+/* end of card_content */
+
+
+/* MAIN */
+
+.container {
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    margin-top: 5px;
+}
+
+main .design_ideas {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.design_ideas h3 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #323232;
+}
+
+.design_ideas p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #323232;
+    line-height: 20px;
+}
+
+main .grid {
+    display: grid;
+    gap: 1.8rem 0.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+main img {
+    max-width: 100%;
+    display: block;
+}
+
+.card-2 {
+    height: 300px;
+}
+
+.card_title_2 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: #524A4E;
+    font-family: sans-serif;
+}
+
+.card_content_2 {
+    position: relative;
+    bottom: 50px;
+    background: white;
+    /* opacity: .8; */
+    align-self: end;
+    margin: .5rem .5rem 2rem;
+    padding: .5rem;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+.card_img_2 {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    aspect-ratio: 1/1.25;
+    border-radius: 1.5rem;
+    opacity: .5;
+}
+
+
+/* END OF MAIN */
+
+
+/* footer */
+
+footer {
+    background-color: #1B1A17;
+    margin-top: 25px;
+}
+
+footer .footer_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+@media (max-width:600px) {
+    footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+}
+
+footer img {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+}
+
+footer .img-footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer .col_1 {
+    text-align: center;
+    padding: 5px;
+    font-family: sans-serif
+}
+
+.details-footer h5 {
+    font-size: 15px;
+    padding: 5px;
+    color: #F7F5F2;
+}
+
+footer .col_2 {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px
+}
+
+footer h3,
+.website {
+    /* margin-left: 100px; */
+    margin-top: 20px;
+    opacity: .9;
+    padding: 2px;
+    font-family: sans-serif;
+    line-height: 20px;
+}
+
+footer .website {
+    font-size: 13px;
+}
+
+footer .col_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col_3 i {
+    margin: 20px;
+    color: white;
+}
